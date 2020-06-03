@@ -13,11 +13,22 @@
 
 
 
+## Index
+
+- [Front-End](#Front-End)
+- [Back-End](#Back-End)
+- [DataBase](#DataBase)
+- [Deploy](#Deploy)
+- [cs](#cs)
+- [etc](#etc)
+
+
+
 ## Front-End
 
 - ### [HTML](https://github.com/jungtaeyong/WEB/blob/master/HTML.md)
 
-- ### CSS
+- ### [CSS](https://github.com/jungtaeyong/WEB/blob/master/CSS.md)
 
 - ### JQuery
 
@@ -43,6 +54,28 @@
 
 
 
+
+
+## DataBase
+
+- ### MariaDB
+
+- ### Oracle
+
+- ### Join
+
+- ### Indexing
+
+- ### Migration
+
+- ### Partitioning
+
+- ### Sharding
+
+
+
+
+
 ## Deploy
 
 - ### Linux
@@ -59,23 +92,11 @@
 
 
 
+## CS
 
+- ### 웹 기본상식
 
-## DB (SQL)
-
-- ### MariaDB
-
-- ### Oracle
-
-- ### Join
-
-- ### Indexing
-
-- ### Migration
-
-- ### Partitioning
-
-- ### Sharding
+- ### Network
 
 
 
