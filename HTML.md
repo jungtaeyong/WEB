@@ -109,6 +109,7 @@ HTML5에서는 시맨틱 웹을 중요시한다. 시맨틱 웹이란 실제적�
 - 페이지마다 title 태그에 제목 선정 (제목 그대로 검색결과가 반영됨)
 
 - meta 태그의 description 표기. 그러나 무분별한 description은 검색엔진이 웹스팸으로 판별할 수 있음.
+
 - URL구조 개선
   - 단어사용
   - 단순구조
@@ -129,7 +130,7 @@ HTML5에서는 시맨틱 웹을 중요시한다. 시맨틱 웹이란 실제적�
 - 제목 태그 (h1~6)사용시 알맞은 의미 사용. (p태그 등의 스타일을 이용해 h처럼 사용하면 안되는 이유)
 
 - PageRank 
-  ![pagerank](C:\Users\User\Desktop\이미지\pagerank.PNG)
+  ![pagerank](https://user-images.githubusercontent.com/52786355/83699050-05942700-a63e-11ea-8199-f5f65d14682e.PNG)
 
   - C, D, E는 어디에도 링크가 걸려있지 않기 때문에 PageRank 순위가 낮다. (검색시 노출도↓)
   - A는 C, D, E에서 A 사이트를 링크로 걸어 놓고 있기 때문에, PageRank 순위가 높다 (검색시 노출도↑)

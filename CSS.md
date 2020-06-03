@@ -2,7 +2,7 @@
 
 뜻 그대로 폭포수처럼 내려가면서 스타일을 적용한다. 기존의 HTML에선 디자인에 관련된 부분도 태그 내에서 같이 처리하다보니 문서가 구조화되지 않고, 가독성이 떨어지게 되어 관리가 힘들어지게 되면서 디자인에 관련된 부분만 따로 관리하기 위해 CSS가 나오게 되었다.  
 
-![css구조](C:\Users\User\Desktop\이미지\css구조.PNG)
+![css구조](https://user-images.githubusercontent.com/52786355/83699173-586dde80-a63e-11ea-86c4-0e7601afa498.PNG)
 
 ​																				[ 기본적인 구조 ]
 
@@ -15,6 +15,8 @@
 
 
 ## 선택자
+
+[선택자 학습 게임](http://flukeout.github.io/)
 
 | 종류 | 내용                                                  |
 | :--: | ----------------------------------------------------- |
@@ -32,7 +34,9 @@
 
 css에서 매우 중요한 개념이다. 서로 교집합 관계에 있는 상황에서 어떤 규칙을 적용해야 하는지 일종의 가중치로, 계산을 해서 적용한다. 3가지 종류의 가중치가 있다. 순차적으로 각각의 계층에서 명시도를 우선적으로 비교하고 같을시, 하위 계층으로 내려오는 방식이다.
 
-![specificity](C:\Users\User\Desktop\이미지\specificity.PNG)
+![specificity](https://user-images.githubusercontent.com/52786355/83699170-57d54800-a63e-11ea-8a41-c5a5b91ca6ae.PNG)
+
+
 
 가장 위의 계층인 ID부터 우선적으로 비교하게 되며, 이 수치가 같을 시 하위 계층인 Class, Attribute, pseudo-classes의 수를 세어 비교하는 방식이다. 3계층의 명시도 가중치까지 같을 경우엔 가장 최근에 (마지막에) 선언된 규칙을 따른다. [명시도 계산기](https://specificity.keegan.st/)
 
