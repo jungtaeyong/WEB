@@ -26,13 +26,22 @@
 
 ## Front-End
 
+ 웹 표준에서는 구조(Constructure)와 표현(Presentation)과 행위(Behavior)를 각각 분리해서 개발하기를 권유한다. 이렇게 하면, 각 사용자는 구조화 된 마크업에 따라 다양한 디자인을 제공받을 수 있기 때문이다. 뿐만 아니라 사이트의 로딩속도도 빨라지고 개발과 유지보수 또한 쉬워진다.
+
+구조 : 웹 콘텐츠에 의미를 부여하고 구조를 형성 → HTML
+
+표현 : 시각적인 디자인과 레이아웃 표현 → CSS
+
+행위 : 모든 front-end의 브라우저 상호작용을 담당 → JavaScript
+
+
 - ### [HTML](https://github.com/jungtaeyong/WEB/blob/master/HTML.md)
 
 - ### [CSS](https://github.com/jungtaeyong/WEB/blob/master/CSS.md)
 
-- ### JQuery
-
 - ### JavaScript
+
+- ### JQuery
 
 - ### BootStrap 실습
 
