@@ -39,7 +39,7 @@
 
 - ### [CSS](https://github.com/jungtaeyong/WEB/blob/master/CSS.md)
 
-- ### JavaScript
+- ### [JavaScript](https://github.com/jungtaeyong/WEB/blob/master/JavaScript.md)
 
 - ### JQuery
 
