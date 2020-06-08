@@ -1,9 +1,15 @@
 # HTML (Hyper Text Mark-up Language)
 
 - 문서의 내용 이외에도 문서의 구조나 서식 등을 포함한다.
+
 - DOM(Document Object Model) 구조
+  
   - html을 루트로 head, body등 트리구조로 이루어짐
+  
 - 서버에서 보내오는 정적인 정보를 그대로 그려내는 것에 강하지만, 동적인 화면구성에 약함. 따라서 동적인 입력에 반응하는 것은 JS(AJAX 등)가 처리
+  
+  [HTML/CSS/JS 연습사이트](https://jsbin.com/?html,output)
+  
   
 
 ## Index
