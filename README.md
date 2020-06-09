@@ -87,7 +87,7 @@
 
 ## Deploy
 
-- ### Linux
+- ### [Linux](https://github.com/jungtaeyong/WEB/blob/master/Linux.md)
 
 - ### AWS
 
