@@ -19,8 +19,8 @@
 - [Back-End](#Back-End)
 - [DataBase](#DataBase)
 - [Deploy](#Deploy)
-- [cs](#cs)
-- [etc](#etc)
+- [CS](#CS)
+- [ETC](#ETC)
 
 
 
