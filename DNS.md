@@ -6,12 +6,10 @@ DNS 이전의 Domain은 Stanford Research Institute라는 신뢰할 만한 기�
 
 예를들어, blog.example.com.에서 (생략되었을 뿐, 모든 도메인의 끝은 `.`을 포함하고 있다.) 클라이언트가 해당 도메인의 IP주소를 요청할 때, 여러 개의 DNS서버를 조회하게 된다. 결론적으로 클라이언트가 원하는 정보는 sub DNS Server에 저장되어 있다. Root부터 시작해서 Top-level -> Second-level -> sub 순이다. sub에서 최종적으로 IP주소를 얻게 된다. 왜 바로 sub로 가지 않고 Root부터 시작할까? 클라이언트는 Root DNS Server 주소는 알고 있지만, 해당 도메인의 주소를 가지고 있는 sub가 어디에 존재하는지는 모른다. 그렇기 때문에 Root부터 시작해서 어떤 sub인지 알아가는 과정이 필요한 것이다. 다음과 같은 과정을 거친다.
 
-1. 클라이언트가 해당 도메인을 Root DNS Server에 요청한다.
-2. .com에 대한 정보를 가지고 해당 부분을 담당하고 있는 Top-level이 어디에 있는지 정보를 알려준다.
-3. 클라이언트는 Root에게 응답받은 정보를 근거로 해당 Top-level DNS Server에 정보를 요청한다.
-4. Top-level DNS Server는 example에 대한 정보를 가지고 해당 부분을 담당하고 있는 sub DNS Server가 어디에 있는지 정보를 알려준다.
-5. 클라이언트는 Top-level DNS Server에게 받은 정보를 근거로 해당 sub에 정보를 요청한다.
-6. sub는 해당 도메인의 IP주소를 알려준다.
+1. 클라이언트가 해당 도메인을 Root DNS Server에 요청하면, `.`밑의 com을 담당하는 Top-level DNS Server를 알려준다.
+3. 클라이언트가 Root에게 응답받은 정보를 근거로 해당 Top-level DNS Server에 요청하면, `.`밑의 example을 담당하는 Second-level DNS Server를 알려준다.
+4. 클라이언트가 Top-level에게 응답받은 정보를 근거로 해당 Second-level에 요청하면, `.`밑의 blog를 담당하는 Sub DNS Server를 알려준다.
+4. 클라이언트가 Second-level에게 응답받은 정보를 근거로 해당 Sub에 요청하면, sub는 해당 도메인의 IP주소를 알려준다.
 
 결과적으로 클라이언트가 Root부터 시작해서 Top-level -> Second-level -> sub 순으로 요청을 주고 받으며 도메인의 실제 IP정보를 얻게 된다.
 
@@ -21,7 +19,7 @@ DNS 이전의 Domain은 Stanford Research Institute라는 신뢰할 만한 기�
 
 - Root : ICANN이라는 비영리 단체이다. 이 단체가 모든 DNS의 뿌리(Root)를 다루는 것이다. 위 그림에는 a.root-servers.net이라고 되어있는데, 서버는 하나만 존재하는 것이 아니다. 실제로는 `a ~ m`까지 13개의 Root서버가 있고, 다시 이 13개의 Root서버는 수백 개의 성능 좋은 서버로 나누어져 있다. Root뿐만 아니라 나머지 서버도 같은 개념이다. 
 - Top-level : Registry 등록소이다. `.com`, `co.kr` 등과 같은 Top-level 도메인을 다룬다.
-- sub : 우리가 아는 도메인을 판매하는 기업들을 예로들 수 있다. (cafe24, 가비아 등) 
+- Second-level : Registrar 등록대행자이다. 우리가 아는 도메인을 판매하는 기업들을 예로들 수 있다. (cafe24, 가비아 등) 
 
 
 

@@ -8,7 +8,7 @@
 
 ![router](https://user-images.githubusercontent.com/52786355/84009371-1f22cf00-a9ae-11ea-9f04-cf1ec01a368d.PNG)
 
-우리가 흔히 사용하는 공유기를 **라우터**라고 한다. 이 라우터는 통신사의 케이블을 WAN에 연결하고 주변의 인터넷이 필요한 기기들은 케이블로 연결해서 인터넷을 가능하게 한다. 이 때, WAN은 Public IP Address(공개망)라고 하고, 공유받는 기기들의 주소는 Gateway Address 또는 Router address라고 부른다. 이 Gateway Address는 Private IP Address(사설망)라고 한다. 사설망의 범위는 192.168.0.0 ~ 192.168.255.255로 총 65536개의 범위를 갖고 있다. 라우터도 라우터의 IP(내부 IP Address)를 갖고 있다. 보통 192.168.xxx.1이 기본 게이트웨이 IP이고, 사설망은 192.168.xxx.2부터 시작하는 식이다. Public IP Address를 알고 싶다면 라우터 정보에서 찾을 수 있기도하고, [웹 사이트](https://whatismyipaddress.com/)에서 알려주기도 한다.
+우리가 흔히 사용하는 공유기를 **라우터**라고 한다. 이 라우터는 통신사의 케이블을 WAN(Wide Area Network)에 연결하고 주변의 인터넷이 필요한 기기들은 케이블을 LAN(Local Area Network) 연결해서 인터넷을 가능하게 한다. 이 때, WAN은 Public IP Address(공개망)라고 하고, 공유받는 기기들의 주소는 Gateway Address 또는 Router address라고 부른다. 이 Gateway Address는 Private IP Address(사설망)라고 한다. 사설망의 범위는 192.168.0.0 ~ 192.168.255.255로 총 65536개의 범위를 갖고 있다. 라우터도 라우터의 IP(내부 IP Address)를 갖고 있다. 보통 192.168.xxx.1이 기본 게이트웨이 IP이고, 사설망은 192.168.xxx.2부터 시작하는 식이다. Public IP Address를 알고 싶다면 라우터 정보에서 찾을 수 있기도하고, [웹 사이트](https://whatismyipaddress.com/)에서 알려주기도 한다.
 
 
 
@@ -26,7 +26,7 @@
 
 ## Port Forwarding
 
- 공유기(라우터)를 사용하지 않고 바로 컴퓨터에 연결하는 경우는 공인IP(Public IP Address)를 사용하기 때문에 다른 사용자가 직접 컴퓨터에 접속할 수 있다. (원격접속, 띄운 서버에 접속 등) 그러나 라우터를 거치고 사설망으로 인터넷을 사용하는 경우가 대부분이고, 이 경우엔 라우터를 통해 어떤 사설망에 접속할 것인지 라우터가 모르기 때문에 접속할 수 없다. 이럴때 사용하는 기술이 포트 포워딩이다. 포트 포워딩은 해당 라우터의 공인IP의 N번 포트로 접속했을 경우, 지정한 사설망의 M번 포트로 연결시켜주는 기술이다.  
+ 공유기(라우터)를 사용하지 않고 바로 컴퓨터에 연결하는 경우는 공인IP(Public IP Address)를 사용하기 때문에 다른 사용자가 직접 컴퓨터에 접속할 수 있다.(원격접속, 띄운 서버에 접속 등) 그러나 라우터를 거치고 사설망으로 인터넷을 사용하는 경우가 대부분이고, 이 경우엔 라우터를 통해 어떤 사설망에 접속할 것인지 라우터가 모르기 때문에 접속할 수 없다. 이럴때 사용하는 기술이 포트 포워딩이다. 포트 포워딩은 해당 라우터의 공인IP의 N번 포트로 접속했을 경우, 지정한 사설망의 M번 포트로 연결시켜주는 기술이다.  
 
 
 
@@ -38,7 +38,7 @@
 
 ## DHCP (Dynamic Host Configuration Protocol)
 
-우리가 라우터에 WAN에 통신사 케이블을 연결하고, 사설망 포트에 케이블을 연결했을 때, 어떻게 사설망 IP를 할당받을 수 있을까? 바로 DHCP가 이러한 로직을 처리한다. 라우터에는 DHCP Server가 깔려있고, 클라이언트 장비(PC)에는 DHCP Client가 깔려있다. 또, MAC Address(물리적 주소라고도 부른다.)라는 게 있는데, Media Access Control의 약자로 각 장비에 있는 고유한 시리얼 번호이다. 앞 6자리는 제조사의 번호, 뒤는 고유 시리얼 번호를 의미한다. PC에 깔린 MAC Address를 이용해 DHCP Clinet가 라우터에게 사설망 IP 할당을 요청하면 라우터의 DHCP Server가 MAC Address로 식별하고 해당 PC에게 사설IP를 할당한다. IP 대여시간도 설정할 수 있다.
+우리가 라우터에 WAN에 통신사 케이블을 연결하고, 사설망 포트에 케이블을 연결했을 때, 어떻게 사설망 IP를 할당받을 수 있을까? 바로 DHCP가 이러한 로직을 처리한다. 라우터에는 DHCP Server가 깔려있고, 클라이언트 장비(PC)에는 DHCP Client가 깔려있다. 또, MAC Address(물리적 주소라고도 부른다.)라는 게 있는데, Media Access Control의 약자로 각 장비에 있는 고유한 시리얼 번호이다. 앞 6자리는 제조사의 번호, 뒤는 고유 시리얼 번호를 의미한다. PC에 깔린 MAC Address를 식별자로 이용해 DHCP Clinet가 라우터에게 사설망 IP 할당을 요청하면 라우터의 DHCP Server가 MAC Address로 식별하고 해당 PC에게 사설IP를 할당한다. IP 대여시간도 설정할 수 있다.
 
 
 
