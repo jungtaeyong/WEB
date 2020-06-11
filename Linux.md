@@ -7,8 +7,14 @@ cloud9은 아마존이 인수해 서비스를 종료한 관계로 구름IDE를 �
 ## Index
 
 - [Command](#Command)
-
-
+- [IO Redirection](#IO-Redirection)
+- [Shell & Kernel](#Shell-&-Kernel)
+- [디렉토리 구조](#디렉토리-구조)
+- [컴퓨터 구조](#컴퓨터-구조)
+- [백그라운드 실행](#백그라운드-실행)
+- [Daemon](#Daemon)
+- [crontab](#crontab)
+- [Permission](#Permission)
 
 
 
@@ -92,7 +98,7 @@ A라는 작업을 한다고 가정하자. A라는 작업을 할 때, a,b,c 등 a
 
 리눅스의 디렉토리는 기본적으로 **루트(`/`)**를 기준으로 트리구조를 갖는다. 각각의 디렉토리 마다 담당하고 있는 역할이 다르기 때문에 자세히는 아니더라도 의미는 이해하고 넘어가자.
 
-![Linux3](C:\Users\User\Desktop\이미지\Linux3.gif)
+![Linux5](https://user-images.githubusercontent.com/52786355/84366078-53e09180-ac0d-11ea-8732-0f66a0a9ca54.PNG)
 
 출처 : http://www.doc.ic.ac.uk/~wjk/UnixIntro/Lecture2.html
 
@@ -132,7 +138,7 @@ A라는 작업을 한다고 가정하자. A라는 작업을 할 때, a,b,c 등 a
 
 
 
-## Deamon
+## Daemon
 
 언제나 실행되고 있어야 하는 프로그램이 있다. 클라이언트와 서버가 있을 때, 서버 입장에서는 언제 클라이언트의 웹 브라우저가 접근할지 알 수가 없다. 그래서 서버를 항상 켜두어야 한다. (apache, tomcat 등) 이러한 프로그램들을 데몬이라고 한다. `service apache2 start/stop` 처럼 service로 시작하는 명령어를 사용한다.  
 
@@ -154,7 +160,7 @@ A라는 작업을 한다고 가정하자. A라는 작업을 할 때, a,b,c 등 a
 
 `ls -l`을 입력해보자. 여러 줄의 다양한 파일과 그에 따른 정보가 나온다. 그 정보가 무엇을 의미할까? 그것에 관한 내용이다. 
 
-![Check Linux file permissions with ls - Web Hosting In Afghanistan](https://pamirwebhost.com/wp-content/uploads/2018/07/Files-permissions-and-ownership-basics-in-Linux.png)
+![Linux6](https://user-images.githubusercontent.com/52786355/84366141-66f36180-ac0d-11ea-8523-64cad556b152.PNG)
 
  숫자 1 다음의 root는 자신(Owner)을 의미하고 그다음 root는 그룹을 의미한다. Other는 자신도, 그룹원도 아닌 다른 사용자를 의미한다. 위 그림의 Onwer, Group , Other을 합해서 Access Mode라고 한다.
 
