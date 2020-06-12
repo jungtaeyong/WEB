@@ -619,7 +619,7 @@ img 태그 뿐만아니라 여러 태그(h1, p 등의 문자열 태그도 가능
 
 ## Minify
 
-보통 bootstrap에서 css파일명이 `bootstrap.css`가 아니라 `bootstrap.min.css`로 되어있는 경우가 많은데, 코드를 **경량화(Minify)**했다는 뜻이다. CSS를 작성할 때, 가독성을 위해 개행을 하고 주석을 추가하는 등 실제 코드가 실행되는 부분이랑 상관없는 부분을 모두 삭제해 숏코드처럼 코드가 매우 짧아짐으로써 용량을 줄일 수 있다. 압축을 한다고 생각하면 된다. [웹 싸이트](https://adam.id.au/clean-css-online/)에서도 제공을 하고, node의 경우 npm을 이용해 설치할 수 도 있다.
+보통 bootstrap에서 css파일명이 `bootstrap.css`가 아니라 `bootstrap.min.css`로 되어있는 경우가 많은데, 코드를 경량화(Minify) 했다는 뜻이다. CSS를 작성할 때, 가독성을 위해 개행을 하고 주석을 추가하는 등 실제 코드가 실행되는 부분이랑 상관없는 부분을 모두 삭제해 숏코드처럼 코드가 매우 짧아짐으로써 용량을 줄일 수 있다. 압축을 한다고 생각하면 된다. [웹 싸이트](https://adam.id.au/clean-css-online/)에서도 제공을 하고, node의 경우 npm을 이용해 설치할 수도 있다.
 
 
 
