@@ -41,7 +41,7 @@
 
 - ### [JavaScript](https://github.com/jungtaeyong/WEB/blob/master/JavaScript.md)
 
-- ### JQuery
+- ### [JQuery](https://github.com/jungtaeyong/WEB/blob/master/JQuery.md)
 
 - ### BootStrap 실습
 
