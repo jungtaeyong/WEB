@@ -43,7 +43,6 @@
 
 - ### [JQuery](https://github.com/jungtaeyong/WEB/blob/master/JQuery.md)
 
-- ### BootStrap 실습
 
 
 
@@ -67,7 +66,7 @@
 
 ## DataBase
 
-- ### MariaDB
+- ### [MySQL](https://github.com/jungtaeyong/WEB/blob/master/MySQL.md)
 
 - ### Oracle
 
