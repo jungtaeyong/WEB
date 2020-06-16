@@ -52,11 +52,7 @@
 
 - ### [Spring](https://github.com/jungtaeyong/WEB/blob/master/Spring.md)
 
-- ### Mybatis
-
-- ###  JSP
-
-- ###  JSTL
+- ###  [JSP](https://github.com/jungtaeyong/WEB/blob/master/JSP.md)
 
 - ### Maven
 
@@ -68,7 +64,7 @@
 
 - ### [MySQL](https://github.com/jungtaeyong/WEB/blob/master/MySQL.md)
 
-- ### Oracle
+- ### [Oracle](https://github.com/jungtaeyong/WEB/blob/master/Oracle.md)
 
 - ### [관계형 데이터 모델링](https://github.com/jungtaeyong/WEB/blob/master/관계형-데이터-모델링.md)
 
@@ -101,8 +97,6 @@
 
 
 ## CS
-
-- ### 웹 기본상식
 
 - ### Network
 
