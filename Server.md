@@ -4,6 +4,18 @@
 
 
 
+## Index
+
+- [Router](#Router)
+- [Network Address Translation](#Network-Address-Translation)
+- [Port Forwarding](#Port-Forwarding)
+- [Dynamic IP Address VS Static IP Address](#Dynamic-IP-Address-VS-Static-IP-Address)
+- [DHCP (Dynamic Host Configuration Protocol)](#DHCP-(Dynamic-Host-Configuration-Protocol))
+- [HTTP/응답코드](#HTTP/응답코드)
+- [ETC](#ETC)
+
+
+
 ## Router
 
 ![router](https://user-images.githubusercontent.com/52786355/84009371-1f22cf00-a9ae-11ea-9f04-cf1ec01a368d.PNG)
@@ -42,12 +54,45 @@
 
 
 
+## HTTP/응답코드
+
+- 1XX : 정보전달. 요청을 받았고, 작업을 진행 중이라는 의미이다. HTTP/1.0 이후 정의되지 않았다. 서버도 클라이언트에 이 코드를 보내지 않는다. 
+
+- 2XX : 성공. 이 작업을 성공적으로 받았고, 이해했으며, 받아들여졌다는 의미이다.
+
+  - 200 OK
+  - 201 Created : 요청이 성공적으로 처리되어서 리소스가 만들어졌음을 의미한다. 
+  - 204 No Content : 성공적으로 처리했지만 컨텐츠를 제공하지 않는다.
+
+  - 206 Partial-Content : 컨텐츠의 일부 부분만 제공한다.
+
+- 3XX : 리다이렉션. 이 요청을 완료하기 위해서는 리다이렉션이 이루어져야 한다는 의미이다. 
+
+- 4XX : 클라이언트 오류. 이 요청은 올바르지 않다는 의미이다. 여기서부터 브라우저에 직접 표출된다. 굵게 강조된 것은 자주 보이는 오류들이다. 
+
+  - **400 Bad Request** (잘못된 요청) : 요청 자체가 잘못됨
+  - **401 Unauthorized** (권한 없음) : 인증이 필요한 리소스에 인증 없이 접근할 경우 발생. 이 응답 코드를 사용할 때에는 반드시 브라우저에 어느 인증 방식을 사용할 것인지 보내야 한다.
+  - **403 Forbidden** (거부됨) : 서버가 요청을 거부함. 관리자가 해당 사용자를 차단했거나 서버에 index.html이 없는 경우에도 발생할 수 있다. (클라이언트가 파일 리스트를 보는 권한을 요청할 경우. 단일 파일을 요청할 경우의 에러는 404)
+
+  - **404 Not Found** (찾을 수 없음) : 찾는 리소스가 없다는 뜻이다. (url 자체가 없음, 리소스가 없음, jsp가 없음 등...)
+  - **410 Gone** (사라짐) : 404와는 달리 찾는 리소스가 영원히 사라진 경우. 
+
+- 5XX : 서버 오류. 올바른 요청에 대해 서버가 응당할 수 없다는 의미.
+
+  - **500 Internal Server Error** (내부 서버 에러) : 서버에 오류가 발생해 작업을 수행할 수 없음. 보통 설정이나 퍼미션 문제. (문법 오류, 배열 사이즈 초과, jstl 문법 오류 등..)
+
+  - **502 Bad Gateway** : 게이트웨이가 연결된 서버로부터 잘못된 응답을 받았을 경우.
+  - **503 Service Temporarily Unavailable** (일시적으로 서비스를 이용할 수 없음) : 웹 서버 과부하로 다운되었을 경우.
+
+
+
 ## ETC
 
 포트번호는 65536개가 있는데, `0 ~ 1023`은 **Well-Known Port**라고 부른다. 이 포트는 약속된 포트로, 예를들면 22는 ssh, 80은 http, 443은 https이다. 따라서 개인서버의 포트를 정할 때는 `0 ~ 1023`을 피해 다른 포트번호로 설정해야한다. 관습적으로 8080포트를 쓰는데 이것은 관습적인 포트번호일뿐, `0 ~ 1023`만 피한다면 어디든 상관없다. 
 
 
 
-참고자료 : 인프런 - 생활코딩 강의
 
- 
+
+#### 참고자료 : 인프런 - 생활코딩 강의(Server), [나무위키 : HTTP/응답코드](https://namu.wiki/w/HTTP/응답 코드)
+

@@ -62,6 +62,14 @@ JSP는 실행시 java소스 코드로 변환한 다음 컴파일되어 실행된
 
 위 그림에서 Java파일은 Servlet이라고 할 수 있다. Java파일로 변환하는 과정은 서블릿 컨테이너에서 하고, 그 예로 톰캣이 있는데, 톰캣 폴더의 해당 프로젝트 경로에 들어가보면 실제로 .java 파일이 있다. java파일을 확인해보면 위에 소스코드 처럼 servlet 형대로 변환되어 있다. 따라서 **JSP를 쓴다는 것은 Servlet을 쓴다는 의미**이다. 따라서 Servlet에 대해 자세히 알고 있어야한다.
 
+
+
+## Index
+
+- [Servlet](#Servlet)
+
+
+
 ## Servlet
 
 - Servlet 라이프 사이클 (생명주기)
@@ -129,8 +137,6 @@ Servlet의 사용도가 높은 이유는 빠른 응답 속도 때문이다. Serv
   
 
 - ServletContextListener
-
-
 
 
 
