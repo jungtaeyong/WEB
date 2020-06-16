@@ -70,7 +70,7 @@
 
 - ### Oracle
 
-- ### Join
+- ### [관계형 데이터 모델링](https://github.com/jungtaeyong/WEB/blob/master/관계형-데이터-모델링.md)
 
 - ### Indexing
 
