@@ -26,7 +26,7 @@ public class HelloServlet extends HttpServlet{
 
 
 
-<img src="https://user-images.githubusercontent.com/52786355/84744203-e4dcb180-afed-11ea-9686-2f9f6290bdfc.PNG" align="center">
+<p align="center"><img src="https://user-images.githubusercontent.com/52786355/84744203-e4dcb180-afed-11ea-9686-2f9f6290bdfc.PNG"></p>
 
 Servlet은 기본적으로 Servlet이라는 인터페이스를 GenericServlet이라는 추상클래스가 상속받고 있고, 이 GenericServlet 추상클래스를 다시 HttpServlet이 상속받고 있는 구조이다. 따라서 HttpServlet을 상속받아 사용해 위 그림의 모든 클래스의 기능을 사용할 수 있는 것이다. 
 
