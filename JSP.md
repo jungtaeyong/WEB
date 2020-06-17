@@ -72,6 +72,28 @@ JSP는 실행시 java소스 코드로 변환한 다음 컴파일되어 실행된
 
 ## Servlet
 
+- 서블릿 컨테이너 동작방식
+  서블릿은 도움이 필요하다. 요청이 들어오면 누군가 요청을 처리할 새로운 스레드를 만들거나 서블릿에서 필요한 메서드를 호출해야 한다. (새로운 스레드를 만든다는 것이지 새로운 인스턴스를 생성한다는 뜻이 아니다. 인스턴스는 최초시작시 한 번만 생성해 계속 재활용한다. 또한, 무제한 쓰레드를 생성하는 것이 아니라 활용가능 한 쓰레드는 쓰레드 풀에 저장했다가 다시 꺼내 쓴다. ) 이 역할을 하는 것이 바로 컨테이너이다. 웹 서버가 클라이언트로부터 서블릿에 대한 요청을 받으면 컨테이너에게 이 요청을 넘긴다. 요청을 넘겨받은 컨테이너는 서블릿을 찾아 필요한 메소드를 호출하게 된다. 그럼 컨테이너의 동작 방식을 살펴보자.
+
+  ![servlet1](https://user-images.githubusercontent.com/52786355/84839245-9247d780-b077-11ea-81e7-f1ba7f5518dc.PNG)
+
+  <center>[서블릿 컨테이너의 동작방식 구조도]</center>
+
+  1. 클라이언트가 url을 통해 요청을 보내면 HTTP Request를 Servlet Container로 전송한다.
+  2. HTTP Request를 전송받은 Servlet Container는 `HttpServletRequest`, `HttpServletResponse` 두 객체를 생성한다.
+  3. (web.xml은 사용자가) 그 다음에는 요청한 url을 분석하여 어느 서블릿에 대해 요청을 한 것인지 찾는다.
+  4. 해당 서블릿에서 service메소드를 호출한 후 POST, GET 여부에 따라 `doGet()` 또는 `doPost()`를 호출한다.
+  5. `doGet()` or `doPost()` 메소드는 동적 페이지를 생성한 후 `HttpServletRespons` 객체에 응답을 보낸다.
+  6. 응답이 끝나면 `HttpServletRequest`, `HttpServletResponse` 두 객체를 소멸시킨다.
+
+  여기서 `HttpServletRequest`, `HttpServletResponse` 객체를 생성한 컨테이너는 요청에 알맞은 서블릿을 찾게 되는데 이 서블릿을 찾기 위해서는 개발자가 서블릿을 매핑해줘야 한다. 그렇지 않으면 적절한 서블릿을 찾을 수 있는 정보가 없기 때문에 컨테이너는 서블릿을 찾지 못한다.
+
+![servlet2](https://user-images.githubusercontent.com/52786355/84840249-f9668b80-b079-11ea-91a7-59c267298db0.PNG)
+
+<center>[서블릿 매핑 구조도]</center>
+
+
+
 - Servlet 라이프 사이클 (생명주기)
   어떤 기술이든 라이프 사이클은 중요하다. 생명주기를 정확하게 알고 있어야 필요한 시점에 필요한 기능(메소드)을 사용할 수 있기 때문이다.
 
