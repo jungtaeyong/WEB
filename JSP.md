@@ -350,7 +350,7 @@ web.xml에 리스너로 등록을 해주거나, 해당 클래스에 `@WebListene
             요청 방식 : GET
             프로토콜 : HTTP/1.1
             URL : http://localhost:8181/jspEx/ex.jsp
-            URI : /jspEx/ex.jsp  
+            URI : /jspEx/ex.jsp
         --%>
     </body>
     </html>
@@ -404,7 +404,11 @@ web.xml에 리스너로 등록을 해주거나, 해당 클래스에 `@WebListene
   - response : 브라우저의 요청에 응답하는 것을 response라고 하며, 이러한 응답의 정보를 가지고 있는 객체를 response라고 한다.
 
     1. `getCharacterEncoding()` : 응답할 때 문자의 인코딩 형태를 구한다.
-    2. `addCookie(Cookie)` : 쿠키를 지정한다.
+
+    2. `addCookie(Cookie)` : 쿠키를 지정한다. 쿠키는 서버에서 생성되고, 클라이언트 측에 전송되어 저장된다. 4kb로 용량이 제한적이며, 300개까지 데이터 정보를 가질 수 있다. 쿠키 생성 방법 및 관련 메소드들을 살펴보자.
+
+       <p align="center"><img src="https://user-images.githubusercontent.com/52786355/84872085-60a52f80-b0bc-11ea-812b-769737688ec2.PNG"></p>
+
     3. `sendRedirect(URL)` : 지정한 URL로 이동한다.
 
 - 서블릿 객체 : page, config
