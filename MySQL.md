@@ -49,15 +49,15 @@ into_option: {
 
 - [Join](#Join)
 
-
+- [Replication](#Replication)
 
 
 
 ## Join
 
-![mysql2](https://user-images.githubusercontent.com/52786355/84632774-5b17e000-af2a-11ea-8636-558648481023.PNG)
+<p aling="center"><img src="https://user-images.githubusercontent.com/52786355/84632774-5b17e000-af2a-11ea-8636-558648481023.PNG"></p>
 
-<center>[Join의 종류]</center>
+<p align="center">[Join의 종류]</p>
 
 Join의 모든 것을 사진 하나로 알 수 있다. 자신이 뽑고자 하는 모든 경우의 수는 벤 다이어그램으로 나타낼 수 있고, 경우마다 LEFT JOIN, RIGHT JOIN, INNER JOIN, FULL OUTER JOIN, IS NULL 등의 조건을 부여해  뽑아낼 수 있다. 일반적으로 INNER JOIN이 성능이 좋다고 한다.
 
@@ -100,4 +100,8 @@ Query의 대부분을 차지하는 `Select`를 어느 정도 해결하기 위해
 <p align="center"><img src="https://nesoy.github.io/assets/posts/20180216/3.png"></p>
 
 언급했던 것처럼 Query의 대부분은 `Select`가 차지하고 있다. 이 부분의 부하를 낮추기 위해 많은 `Slave Database`를 생성하게 된다면 `Read(Select)` 성능 향상 효과를 얻을 수 있다. `Master Database` 영향없이 로그를 분석할 수 있다.
+
+
+
+#### 참고자료 : [Nesoy Blog](https://nesoy.github.io/articles/2018-02/Database-Replication)
 
