@@ -80,11 +80,13 @@ JSP는 실행시 java소스 코드로 변환한 다음 컴파일되어 실행된
 
   ![servlet1](https://user-images.githubusercontent.com/52786355/84839245-9247d780-b077-11ea-81e7-f1ba7f5518dc.PNG)
 
-  <center>[서블릿 컨테이너의 동작방식 구조도]</center>
+  <p align="center">[서블릿 컨테이너의 동작방식 구조도]</p>
+
+  
 
   1. 클라이언트가 url을 통해 요청을 보내면 HTTP Request를 Servlet Container로 전송한다.
   2. HTTP Request를 전송받은 Servlet Container는 `HttpServletRequest`, `HttpServletResponse` 두 객체를 생성한다.
-  3. (web.xml은 사용자가) 그 다음에는 요청한 url을 분석하여 어느 서블릿에 대해 요청을 한 것인지 찾는다.
+  3. 그다음에는 요청한 url을 분석하여 어느 서블릿에 대해 요청을 한 것인지 찾는다. (web.xml에서 진행하며, 개발자가 매핑한다.)
   4. 해당 서블릿에서 service메소드를 호출한 후 POST, GET 여부에 따라 `doGet()` 또는 `doPost()`를 호출한다.
   5. `doGet()` or `doPost()` 메소드는 동적 페이지를 생성한 후 `HttpServletRespons` 객체에 응답을 보낸다.
   6. 응답이 끝나면 `HttpServletRequest`, `HttpServletResponse` 두 객체를 소멸시킨다.
@@ -93,14 +95,14 @@ JSP는 실행시 java소스 코드로 변환한 다음 컴파일되어 실행된
 
 ![servlet2](https://user-images.githubusercontent.com/52786355/84840249-f9668b80-b079-11ea-91a7-59c267298db0.PNG)
 
-<center>[서블릿 매핑 구조도]</center>
+<p align="center">[서블릿 매핑 구조도]</p>
 
 
 
 - Servlet 라이프 사이클 (생명주기)
   어떤 기술이든 라이프 사이클은 중요하다. 생명주기를 정확하게 알고 있어야 필요한 시점에 필요한 기능(메소드)을 사용할 수 있기 때문이다.
 
-![jsp3](https://user-images.githubusercontent.com/52786355/84840735-60387480-b07b-11ea-99d7-b44016b02020.PNG)
+<p align="center"><img src="https://user-images.githubusercontent.com/52786355/84840735-60387480-b07b-11ea-99d7-b44016b02020.PNG"></p>
 
 Servlet의 사용도가 높은 이유는 빠른 응답 속도 때문이다. Servlet은 한 번(최초 요청 시)만 객체가 생성되어 메모리에 로딩되고, 이후 요청 시에는 기존의 객체를 그대로 재활용한다. 여러 번 객체를 생성할 필요가 없기 때문에 속도가 빠르다. 이후 클라이언트가 요청 할 때마다 요청에 따라 doGet(), doPost() 메소드가 호출된다. 이후 서버를 종료하거나 중단했을 시 자원을 한 번 해제한다.
 
