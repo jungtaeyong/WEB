@@ -66,6 +66,8 @@
 
 - ### [Oracle](https://github.com/jungtaeyong/WEB/blob/master/Oracle.md)
 
+- ### [Oracle VS MySQL](https://github.com/jungtaeyong/WEB/blob/master/Oracle%20VS%20MySQL.md)
+
 - ### [관계형 데이터 모델링](https://github.com/jungtaeyong/WEB/blob/master/관계형-데이터-모델링.md)
 
 - ### Indexing

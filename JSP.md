@@ -907,7 +907,7 @@ Core : 기본적인 라이브러리로 출력, 제어문, 반복문 같은 기�
 
 
 
-#### 참고
 
-#### 자료 : [배움이 즐거운 개발자님 블로그](https://galid1.tistory.com/488), [나무위키](https://namu.wiki/w/JSP), [Seoul Wiz 블스님 JSP 유튜브 강의](https://www.youtube.com/watch?v=dWkKwWDQxio&list=PLieE0qnqO2kTyzAlsvxzoulHVISvO8zA9&index=35)
+
+#### 참고 자료 : [배움이 즐거운 개발자님 블로그](https://galid1.tistory.com/488), [나무위키](https://namu.wiki/w/JSP), [Seoul Wiz 블스님 JSP 유튜브 강의](https://www.youtube.com/watch?v=dWkKwWDQxio&list=PLieE0qnqO2kTyzAlsvxzoulHVISvO8zA9&index=35)
 
